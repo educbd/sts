@@ -1,24 +1,20 @@
 x, y
 user-guide, row = [1 2 3] print(data.iloc[row :]) 
 row/topic, 3/CentralLimitTeorem....
-Bayesian Prob, P_S = 0.8 P_B_S = .96 P_B_NS = 0.05 P_S_B = P_B_S * P_S / ( P_B_S * P_S + P_B_NS * ( 1 - P_S ) ) print("{:.2f}".format(P_S_B*100)"%")
+Bayesian Prob," P_S = 0.8 P_B_S = .96 P_B_NS = 0.05 P_S_B = P_B_S * P_S / ( P_B_S * P_S + P_B_NS * ( 1 - P_S ) ) print(""{:.2f}"".format(P_S_B*100)""%"")"
 Conf_Int import, import numpy as np from scipy import stats
-Conf_Int Succ/Fail cond, n = 603 #shoppers sample# n_n = 142 #samples of sample# p = n_n/n #p hat also mean# if (n * (1-p)) >= 10 and (n*p) >= 10: print("Success") else: print("Failure")
-Conf_Int Stand Err, SE = np.sqrt((p*(1-p))/n) print ("Standar Error: " SE)
+Conf_Int Succ/Fail cond," n = 603 #shoppers sample# n_n = 142 #samples of sample# p = n_n/n #p hat also mean# if (n * (1-p)) >= 10 and (n*p) >= 10: print(""Success"") else: print(""Failure"")"
+Conf_Int Stand Err," SE = np.sqrt((p*(1-p))/n) print (""Standar Error: "" SE)"
 Conf_Int Conf_LvL 95%, cl = 0.95 stats.norm.interval(cl p SE)
 Poisson Distr import, from scipy.stats import poisson 
-, k = 4 L = (5/7) (poisson.pmf(k L))*100
+Poisson Distr ex, #A real estate agent store that shows an average 5 houses per week. Calculate the probability that this agent will show 4 houses on a given day using the Poisson distribution# k = 4 L = (5/7) (poisson.pmf(k L))*100
 Normal Distr import, from scipy.stats import norm (a) Z <−1.45 (b) Z >1.18 (c) −0.4<Z <2.1
-(a) Z <−1.45, Za= -1.45 print("a) =" "{:.2f}".format(norm.cdf(Za)*100)"%")
-(b) Z >1.18, Zb= 1.18 print("b) =" "{:.2f}".format(norm.sf(Zb)*100)"%")
-(c) -0.4< Z <2.1, Z_low = -0.4 Z_upp = 2.1 percent_c =(norm.cdf(Z_upp) - norm.cdf(Z_low))*100 print("c) =" "{:.2f}".format(percent_c)"%")
+(a) Z <-1.45," Za= -1.45 print(""a) ="" ""{:.2f}"".format(norm.cdf(Za)*100)""%"")"
+(b) Z >1.18," Zb= 1.18 print(""b) ="" ""{:.2f}"".format(norm.sf(Zb)*100)""%"")"
+(c) -0.4< Z <2.1," Z_low = -0.4 Z_upp = 2.1 percent_c =(norm.cdf(Z_upp) - norm.cdf(Z_low))*100 print(""c) ="" ""{:.2f}"".format(percent_c)""%"")"
 Geometric Distr import, from scipy.stats import geom
-Geom Distr ex, #There is only a 15% probability to purchase a product. What is the probability of that the salesperson will make a sale on the 12th attempt?# p = 0.15 n = 12 print("{:.2f}".format(geom.pmf(n p)*100)"%")
+Geom Distr ex," #There is only a 15% probability to purchase a product. What is the probability of that the salesperson will make a sale on the 12th attempt?# p = 0.15 n = 12 print(""{:.2f}"".format(geom.pmf(n p)*100)""%"")"
 NEGATIVE Binomial Distr import, from scipy.stats import nbinom
-NEGATIVE Binomial Distr ex, #A not-so-skilled volleyball player has a 15% chance of making the serve. Serves are independent. What is the probability that on the 10th try she will make her 3rd successful serve?# n = 10 k = 3 f = n-k p = 0.15 print("{:.2f}".format(nbinom.pmf(f k p)*100)"%")
+NEGATIVE Binomial Distr ex," #A not-so-skilled volleyball player has a 15% chance of making the serve. Serves are independent. What is the probability that on the 10th try she will make her 3rd successful serve?# n = 10 k = 3 f = n-k p = 0.15 print(""{:.2f}"".format(nbinom.pmf(f k p)*100)""%"")"
 Binomial Distr import, from scipy.stats import binom
-Binomial Distr ex, #Unemployment rate = 7.9%  Among a random sample of three people what is the probability that only one is unemployed?# k = 1 n = 3 p = 0.079 print("{:.2f}".format(binom.pmf(k n p)*100)"%")
-
-
-
-
+Binomial Distr ex," #Unemployment rate = 7.9%  Among a random sample of three people what is the probability that only one is unemployed?# k = 1 n = 3 p = 0.079 print(""{:.2f}"".format(binom.pmf(k n p)*100)""%"")"
